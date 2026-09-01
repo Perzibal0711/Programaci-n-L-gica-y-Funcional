@@ -122,7 +122,10 @@ Despues se utiliza un ciclo for para probar todas las combinaciones posibles de 
 
 ### Resultados
 
+Como resultados esperados de esta actividad es que al introducir una cantida esta se descomponga en cantidades mas pequeñas mustrando las distintas conbinaciones validas, para ello se tiene como ejemplo que compruebe el funcionamiento del programa la cantidad de 20, en la cual al introducir la cantidad en nuestro programa utilizando tanto recursividad como interaciones se optiene los mismos resultados.
 
+En este ejemplo al introducir 20, el programa empezara a dividir la cantidad primero usando billentes de 100, despues de 50 y asi sucecivamente hasta llegar las monedas de 1 peso, esto cabe recalcar que sera utilizando combinaciones validas de las mismas cantidades. 
 
-### Conclusiones
+![Resultado recursividad](resultado.png)
 
+como se muestra en la imgane da las cantidades a usar utilizando las monedas que sean validas. asi mismo en este ejemplo se utilizo la recursividad, pero asi mismo con iteraciones se optine el mismo resultado.
