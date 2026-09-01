@@ -1,6 +1,6 @@
 def comp_paren(expre):
     stackPare = []
-    cont_pare = 0;
+    cont_pare = 0
     if expre:
         stackPare.append(expre[0])
         for i in range(1, len(expre)):
@@ -22,6 +22,7 @@ def comp_paren(expre):
             return cont_pare
         else:
             return False
+        
 
 def main():
     expresion = input("Ingrese una expresion utilizando solamente ( [ { } ] ) para comprobar que sea valida la expresion: ")
