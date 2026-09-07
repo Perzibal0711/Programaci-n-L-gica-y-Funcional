@@ -1,4 +1,4 @@
-# Comprobacion de expresiones que tienen parentesis
+# Ejercicio 2 - Comprobacion de expresiones que tienen parentesis
 
 **Instrucciones**
 
