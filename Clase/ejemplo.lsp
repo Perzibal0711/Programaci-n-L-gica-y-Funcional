@@ -1,0 +1,5 @@
+(defun suma(a b)
+(+ a b))
+
+(defun multiplica(a b)
+(* a b))

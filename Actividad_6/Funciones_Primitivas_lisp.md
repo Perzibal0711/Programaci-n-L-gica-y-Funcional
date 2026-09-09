@@ -46,9 +46,9 @@ Funcion -> Restar cantidades o numeros.
 Funcion -> Multiplicar cantidades o numeros.
 
 ```
-(/ 10 2)      => 5
-(/ 10 3)      => 10/3
-(/ 10.0 3)    => 3.3333333
+(* 10 2)      => 5
+(* 10 3)      => 10/3
+(* 10.0 3)    => 3.3333333
 ```
 
 #### 2.4 Division -> /
