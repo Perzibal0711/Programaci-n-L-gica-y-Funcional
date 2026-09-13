@@ -12,9 +12,16 @@
                     (opt-area)
                     (ask-option)
                 )
-                (2 (opt-volum)(ask-option))
-                (3 "Adios 0_0")
-                (otherwise (ask-option))
+                (2 
+                    (opt-volum)
+                    (ask-option)
+                )
+                (3 
+                    "Adios 0_0"
+                )
+                (otherwise 
+                    (ask-option)
+                )
             )
             (ask-option)
         )
