@@ -70,8 +70,8 @@
 (defun v_paralelepipido(a b c)
 (* a b c))
 
-;;Volumen de un tetaedro
-(defun v_tetaedro(a)
+;;Volumen de un tetraedro
+(defun v_tetraedro(a)
 (* (/ (* a a a) 12) (sqrt 2)))
 
 ;;Volumen de un octaedro
@@ -79,5 +79,5 @@
 (* (/ (* a a a) 3) (sqrt 2)))
 
 ;;Volumen de una piramide truncada
-(defun v_p_truncada(h b_ma b_me)
+(defun v_p_truncada(b_ma b_me h)
 (* (/ h 3) (+ b_ma b_me (sqrt (* b_ma b_me)))))
