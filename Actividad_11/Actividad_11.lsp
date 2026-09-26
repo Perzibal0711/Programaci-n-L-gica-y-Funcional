@@ -1,4 +1,5 @@
 ;; Ejercicio 1 - if / else: edad para cine
+;; (load "C:/Users/Leonardo/Documents/Semestre_8/Prolog/Programaci-n-L-gica-y-Funcional/Actividad_11/Actividad_11.lsp")
 
 ;; (validar-edad-cine 10)
 (defun validar-edad-cine (?edad)
@@ -6,13 +7,13 @@
         (if (> ?edad 0)
             (if (< ?edad 120)
                 (if (and (> ?edad 0) (< ?edad 12))
-                    (format t "AA")
+                    (if (format t "AA") t t)
                     (if (and (>= ?edad 12) (< ?edad 15))
-                        (format t "B")
+                        (if (format t "B") t t)
                         (if (and (>= ?edad 15) (< ?edad 18))
-                            (format t "B15")
+                            (if (format t "B15") t t)
                             (if (and (>= ?edad 18))
-                                (format t "C")
+                                (if (format t "C") t t)
                             )
                         )
                     )
@@ -38,6 +39,7 @@
     (when (string= clave (string-downcase clave))
         (format t "Aviso: No hay mayusculas~%")
     )
+    t
 )
 
 ;; Ejercicio 3 -unless: no procesar si faltan datos
@@ -59,6 +61,7 @@
         (return-from procesar-solicitud (reportar-error "Debe aceptar terminos"))
     )
     (format t "Solicitud de ~A Procesada~%" nombre)
+    t
 )
 
 ;; Ejercicio 4 - case: role de un sistema escolar
@@ -66,11 +69,11 @@
 ;; (permiso-por-rol 'padre)
 (defun permiso-por-rol (rol)
     (case rol
-        (admin "Puede crear usuarios y materias")
-        (docente "Puede calificar y pasar lista")
-        (alumno "Puede consultar calificaciones")
-        (padre "Puede ver boleta de sus hijos")
-        (otherwise "Rol no reconocido")
+        (admin (format t "Puede crear usuarios y materias~%") t)
+        (docente (format t "Puede calificar y pasar lista~%") t)
+        (alumno (format t "Puede consultar calificaciones~%") t)
+        (padre (format t "Puede ver boleta de sus hijos~%") t)
+        (otherwise (format t "Rol no reconocido~%") nil)
     )
 )
 
@@ -85,10 +88,10 @@
         (return-from semaforo-promedio (reportar-error "Promedio fuera de [0, 100]"))
     )
     (cond 
-        ((< p 60) (format t "ROJO"))
-        ((< p 80) (format t "AMARILLO"))
-        ((< p 90) (format t "VERDE"))
-        (t (format t "ORO"))
+        ((< p 60) (format t "ROJO") t)
+        ((< p 80) (format t "AMARILLO") t)
+        ((< p 90) (format t "VERDE") t)
+        (t (format t "ORO") t)
     )
 )
 
@@ -96,8 +99,8 @@
 
 ;; (alta-usuario "anas" "secreto1" 20 "MX" t)
 (defun alta-usuario (user pass edad pais bloqueado)
-    (if (and (and (> (length user) 3) (stringp user)) (and (> (length pass) 8) (stringp pass)) (> edad 13) (or (string= "MX" pais) (string= "CO" pais) (string= "AR" pais)) (not bloqueado))
-        (format t "Usuario dado de alta")
+    (if (and (and (stringp user) (> (length user) 3)) (and (stringp pass) (> (length pass) 8)) (> edad 13) (or (string= "MX" pais) (string= "CO" pais) (string= "AR" pais)) (not bloqueado))
+        (if (format t "Usuario dado de alta" ) t t)
         (format t "Alta rechazada")
     )
 )
@@ -112,7 +115,7 @@
                 ((< dato 35) "HIPOTERMIA")
                 ((< dato 37.5) "NORMAL")
                 ((< dato 39) "FIEBRE")
-                (t "ALTA")
+                (t "FIEBRE ALTA")
             )
         )
         (string 
@@ -145,7 +148,7 @@
             (exp (values 160 10 "EXpress"))
             (noc (values 220 5 "Nocturno"))
             (int (values 450 15 "Internacional"))
-            (t (return-from cotizar-envio (reportar-error "Excede peso del servicio")))
+            (t (return-from cotizar-envio (reportar-error "Codigo no valido")))
         )
 
         (unless (< peso peso-max)
@@ -212,6 +215,8 @@
 
 ;; Ejercicio 10 - mini sistema: credito escolar
 
+;; (ronda-credito *ronda*)
+
 ;;
 (defstruct solicitante
     nombre
@@ -243,11 +248,11 @@
     (unless (and (integerp promedio) (>= promedio 0) (<= promedio 100))
         (return-from validar-solicitante (reportar-error "Promedio fuera de rango [0, 100]"))
     )
-    (unless (and (integerp monto) (> monto 0))
+    (unless (and (numberp monto) (> monto 0))
         (return-from validar-solicitante (reportar-error "El monto debe ser mayor a 0"))
     )
     (unless (and (integerp semestre) (>= semestre 1) (<= semestre 10))
-        (return-from validar-solicitante (reportar-error "semestre fuera de rango [0, 10]"))
+        (return-from validar-solicitante (reportar-error "semestre fuera de rango [1, 10]"))
     )
     t
 )

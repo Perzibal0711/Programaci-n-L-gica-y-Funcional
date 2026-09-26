@@ -64,6 +64,7 @@ Cuando se ingresa algun numero diferente a las opciones ants mensionadas o un ca
         (opt-area)
     )
 ```
+
 Estas mismas instrucciones se aplican en el calculo de volumenes donde lo unico que cambia es la variable de `area` pasa a `vol`.
 
 Para el funcionamiento del los case con los cuales se manda a llamar la funcion que calcula el area o volumen de una figura se utiliza la siguiente estructura. Primero se utiliza un `format` con el cual se pide al usuario que ingrese un valor, despues usando un `let` se almacena en una variable el valor ingresado y con un `format` nuevamente dentro del `let` se muestra el valor del llamdo de la funcion.
