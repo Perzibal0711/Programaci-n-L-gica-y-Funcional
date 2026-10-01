@@ -1,0 +1,31 @@
+;;1.- Calculo de sueldo
+;; (c_sueldo 40000 8)
+(defun c_sueldo (sueldo anos) 
+    (when (>= anos 10)
+        (setq nsueldo (+ sueldo (* sueldo 0.1)))
+        (format t "Tu sueldo tiene un 10% de aumento.~%")
+        (format t "Tu sueldo actual es: ~A" nsueldo)
+    )
+    (if (and (< anos 10) (>= anos 5))
+        (progn
+            (setq nsueldo (+ sueldo (* sueldo 0.07)))
+            (format t "Tu sueldo tiene un 7% de aumento.~%")
+            (format t "Tu sueldo actual es: ~A" nsueldo)
+        )
+        (if (and (< anos 5) (>= anos 3))
+            (progn 
+                (setq nsueldo (+ sueldo (* sueldo 0.05)))
+                (format t "Tu sueldo tiene un 5% de aumento.~%")
+                (format t "Tu sueldo actual es: ~A" nsueldo)
+            )
+        )
+    )
+    (unless (> anos 3)
+        (setq nsueldo (+ sueldo (* sueldo 0.03)))
+        (format t "Tu sueldo tiene un 3% de aumento.~%")
+        (format t "Tu sueldo actual es: ~A" nsueldo)
+    )
+)
+
+;;2.- Peso en libras
+(defun lavadora (peso))
