@@ -27,5 +27,57 @@
     )
 )
 
+(defun reportar-mensaje (agua nivel)
+    (format t "Nivel: ~A~%" nivel)
+    (format t "Agua a utilizar: ~A~%" agua)
+    t
+)
+
+(defun reportar-error ()
+    (format nil "Error: Exediste el peso maximo.~%Quita algo de peso.")
+)
+
 ;;2.- Peso en libras
-(defun lavadora (peso))
+;; (lavadora 28)
+(defun lavadora (peso)
+    (unless (< peso 30)
+        (return-from lavadora (reportar-error))
+    )
+    (if (>= peso 22)
+        (return-from lavadora (reportar-mensaje  (float (* peso (/ 100 29))) "Maximo"))
+        (if (>= peso 15)
+            (return-from lavadora (reportar-mensaje (float(* peso (/ 100 29))) "Alto"))
+            (if (>= peso 8)
+                (return-from lavadora (reportar-mensaje (float(* peso (/ 100 29))) "Medio"))
+                (return-from lavadora (reportar-mensaje (float(* peso (/ 100 29))) "Minimo"))
+            )
+        )
+    )
+)
+
+;;3.-
+(defun confirmar-acceso (msg)
+    (format t "~A~%" msg)
+    t
+)
+
+(defun negar-acceso (msg)
+    (format t "~A~%" msg)
+)
+
+(defun fiesta ()
+    (format t "Que edad tienes: ")
+    (let ((edad (parse-integer (read-line))))
+        (when (> edad 15)
+            (format t "Tres regalo: ")
+            (if (string= (read-line) "s")
+                (return-from fiesta (confirmar-acceso "puedes entrar a la fiesta."))
+                (return-from fiesta (negar-acceso "No puedes entrar a la fiesta."))
+            )
+        )
+        (if (= edad 15)
+            (return-from fiesta (confirmar-acceso "Puedes entrar a la fiesta gratis."))
+            (return-from fiesta (negar-acceso "No puedes entrar a la fiesta eres menor de 15 años."))
+        )
+    )
+)
