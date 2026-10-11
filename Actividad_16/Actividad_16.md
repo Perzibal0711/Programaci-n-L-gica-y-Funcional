@@ -52,61 +52,61 @@ Identifiacr las variables de individuo, constantes de indivicuio, cuantificador,
     * relaciones: GiraAlrededor(X, luna)
     * Dominio: Sistema solar
 - Hay por lo menos un satelite.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: satelite
+    * Constante: satelite
+    * Cuantificador: ∃ algunos
+    * Propiedades: ...un satelite
+    * relaciones: No tiene 
+    * Dominio: Sistema salar
 - Todos los perros del vecindario muerden a algun cartero.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: perro, cartero
+    * Constante: No tiene
+    * Cuantificador: ∀ todos, ∃ algunos
+    * Propiedades: ...muerden a...
+    * relaciones: Muerde(X, Y)
+    * Dominio: Vecindario
 - Hay un cartero al que lo muerden todos los perros.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: cartero, perro
+    * Constante: No tiene
+    * Cuantificador: ∃ algunos, ∀ todos
+    * Propiedades: ...lo muerden..
+    * relaciones: Mordido(Y, X)
+    * Dominio: Vecindario
 - Todos los carteros son mordidos por algun perro.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: cartero, perro
+    * Constante: No tiene
+    * Cuantificador: ∀ todos, ∃ algunos
+    * Propiedades: ...son mordidos...
+    * relaciones: Mordido(Y, X)
+    * Dominio: Vecindario
 - Hay un perro que muerde a todos los carteros.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: perro, cartero
+    * Constante: No tiene
+    * Cuantificador: ∃ algunos, ∀ todos
+    * Propiedades: ...muerde a...
+    * relaciones: Muerde(X, Y)
+    * Dominio: Vecindario
 - Todos los perros que asustan a algun cartero, lo muerden.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: perro, cartero
+    * Constante: No tiene
+    * Cuantificador: ∀ todos, ∃ algunos
+    * Propiedades: ...asustan a..., muerden
+    * relaciones: Asustan(X, Y):- Muerde(X, Y)
+    * Dominio: Vecindario
 - Hay un perro que muerde a todos los perros que muerden a algun cartero.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: perro, cartero
+    * Constante: No tiene
+    * Cuantificador: ∃ algunos, ∀ todos
+    * Propiedades: ...muerde a..., 
+    * relaciones: Muerde(Z, X):- Muerde(X, Y)
+    * Dominio: Vecindario
 - Hay un solo perro que se muerde asi mismo.
-    * Variable: 
-    * Constante:
-    * Cuantificador:
-    * Propiedades:
-    * relaciones:
-    * Dominio:
+    * Variable: perro
+    * Constante: No tiene
+    * Cuantificador: ∃ algunos
+    * Propiedades: ...muerde a...
+    * relaciones: Muerde(X, X)
+    * Dominio: Vecindario
 
 
 - La Biblioteca Nacional tiene el libro "Don Quijote de la Mancha".
