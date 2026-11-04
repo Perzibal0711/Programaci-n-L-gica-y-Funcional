@@ -1,5 +1,4 @@
-# Funciones propias del lenguaje Prolog.
-
+# Actividad - Operacion Residencial
 Agentes: en la Calle del Águila hay cuatro casas en fila. En cada una vive una persona, la casa tiene un color, la persona bebe algo y tiene una mascota. El cuartel necesita una sola respuesta:
 
 **¿Quién tiene el pez?**
