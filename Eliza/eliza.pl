@@ -48,7 +48,7 @@ template([buendia, _], ['Buendia', 'como', estas, tuc, '?'], []).
 template([buenardas], ['buenas', 'te', 'encunetras', 'bien'], []).
 template([buenas, tardes, _, estas, bien, '?'], ['Yo', 0, 'estoy', 'bien', 'y', 'tu', '?'], [2]).
 template([buenos,dias], ['Buenos','dias','espero','que','estes','bien'], []).
-template([buenas, tardes], ['Buena', 'tarde'], []).
+template([buenas, tardes], ['No','te','tardes'], []).
 template([buenas, noches], ['Buenas', 'nocehs', 'es', 'momento', 'de', 'dormir'], []).
 
 template([yo, s(_), tu, '.'], [why, do, you, 0, me ,'?'], [1]).
