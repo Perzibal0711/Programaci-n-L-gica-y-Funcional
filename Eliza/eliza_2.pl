@@ -277,18 +277,6 @@ template([mi, hija], ['Cuentame', 'mas', 'sobre', 'tu', 'hija'], []).
 template([mi, esposa],  ['Cuentame', 'mas', 'sobre', 'tu', 'esposa'], []).
 template([mi, esposo],  ['Cuentame', 'mas', 'sobre', 'tu', 'esposo'],[]).
 
-
-%%%%%%%%%%%% templates de Neumonia %%%%%%%%%%%%
-
-
-
-
-%%%%%%%%%%%% templates de tuberculosis %%%%%%%%%%%%
-
-%%%%%%%%%%%% proceso de generar o buscar respuesta %%%%%%%%%%%%
-
-template(_, ['Por favor, explica un poco mas.'], []).
-
 %%%%%%%%%%%%% La familia de eliza : flagfam %%%%%%%%%%%%%
 
 %%%%%%%%%%%%% HECHOS: PADRES %%%%%%%%%%%%%
@@ -799,10 +787,9 @@ responde(Rel, C, R):-
     ;   atomic_list_concat(['No tengo registro de ', Rel, ' de ', CB], R)
     ).
 
-
 %%%%%%%%%%%%% Lo que le gusta a eliza : flagLike %%%%%%%%%%%%
-elizaLikes(X, R):- likes(X), R = ['Yeah', i, like, X].
-elizaLikes(X, R):- \+likes(X), R = ['Nope', i, do, not, like, X].
+elizaLikes(X, R):- likes(X), R = ['Yeah', me, gustan las(os), X].
+elizaLikes(X, R):- \+likes(X), R = ['Nope', no, me, gustan, las(os),  X].
 likes(manzanas).
 likes(ponies).
 likes(zombies).
@@ -811,15 +798,15 @@ likes(computadoras).
 like(carros).
 
 %%%%%%%%%%%%% lo que hace eliza: flagDo %%%%%%%%%%%%
-elizaDoes(X, R):- does(X), R = ['Yes', i, X, and, i, love, it].
-elizaDoes(X, R):- \+does(X), R = ['No', i, do, not, X ,'.', it, is, too, hard, for, me].
+elizaDoes(X, R):- does(X), R = ['Yes', yo, X, y, me, gusta].
+elizaDoes(X, R):- \+does(X), R = ['No', yo no, X ,'.', es, muy, dificil, para, mi].
 does(estudiar).
 does(cocinar).
 does(trabajar).
 
 %%%%%%%%%%%%% lo que es eliza: flagIs %%%%%%%%%%%%
 elizaIs(X, R):- is0(X), R = ['Yes', yo, soy, X].
-elizaIs(X, R):- \+is0(X), R = ['No', i, am, not, X].
+elizaIs(X, R):- \+is0(X), R = ['No', yo, no, soy, X].
 is0(tonto).
 is0(raro).
 is0(agradable).
@@ -896,3 +883,4 @@ replace0([I|Index], Input, N, Resp, R):-
 %    read_line_to_string(user_input, String),
 %    split_string(String, " ", " ", InputList),
 %    maplist(atom_string, Input, InputList).
+
