@@ -29,11 +29,43 @@ eliza(Input) :-
 
 template([hola, mi, nombre, es, s(_), '.'], ['Hola', 0, 'como', estas, tu, '?'], [4]).
 template([hola, ',', mi, nombre, es, s(_), '.'], ['Hola', 0, 'como', estas, tus, '?'], [5]).
-template([hola, s(_), yo, soy, s(_),'.'], [hola , 1, yo, soy , 1], [1, 4]).
-template([hola, _], ['Hola', 'como', estas, tuc, '?'], []).
 template([hola, camabola], ['que', 'paso'], []).
 template([holawas], ['holawas','en','que','te','puedo','ayudar','?'], []).
+template([hola, eliza, como, estas], ['Hola', 'estoy', 'muy', 'bien', 'gracias', 'y', 'tu', '?'], []).
+template([hola, eliza, que, haces], ['Hola', 'aqui', 'platicando', 'contigo', 'y', 'tu', 'que', 'haces', '?'], []).
+template([hola, eliza], ['Hola', 'que', 'gusto', 'saludarte', '!'], []).
+template([hola, como, estas], ['Hola', 'yo', 'estoy', 'bien', 'y', 'tu', '?'], []).
+template([hola, como, te, va], ['Hola', 'me', 'va', 'excelente', 'y', 'a', 'ti', '?'], []).
+template([hola, como, amaneciste], ['Hola', 'amanecí', 'listo', 'para', 'ayudarte'], []).
+template([hola, que, tal], ['Hola', 'todo', 'bien', 'y', 'tu', '?'], []).
+template([hola, que, haces], ['Hola', 'estoy', 'esperando', 'tu', 'consulta'], []).
+template([hola, buenas], ['Hola', 'buenas', 'como', 'te', 'va', '?'], []).
+template([hola, buenos, dias], ['Hola', 'buenos', 'dias', 'espero', 'que', 'estes', 'bien'], []).
+template([hola, buenas, tardes], ['Hola', 'buenas', 'tardes', 'en', 'que', 'te', 'ayudo', '?'], []).
+template([hola, buenas, noches], ['Hola', 'buenas', 'noches', 'como', 'estuvo', 'tu', 'dia', '?'], []).
+template([hola, s(_), yo, soy, s(_),'.'], [hola , 1, yo, soy , 1], [1, 4]).
+template([hola, _], ['Hola', 'como', estas, tuc, '?'], []).
 
+template([como, estas], ['Estoy', 'bien', 'gracias', 'y', 'tu', 'como', 'estas', '?'], []).
+template([como, estas, hoy], ['Hoy', 'estoy', 'de', 'maravilla', 'y', 'tu', '?'], []).
+template([como, te, va], ['Me', 'va', 'muy', 'bien', 'gracias', 'y', 'a', 'ti', '?'], []).
+template([como, te, encuentras], ['Me', 'encuentro', 'bien', 'gracias', 'por', 'preguntar'], []).
+template([como, te, sientes], ['Me', 'siento', 'bien', 'aunque', 'soy', 'un', 'programa', 'y', 'tu', '?'], []).
+template([como, andas], ['Aqui', 'andamos', 'bien', 'y', 'tu', '?'], []).
+template([como, amaneciste], ['Amaneci', 'con', 'ganas', 'de', 'platicar', 'y', 'tu', '?'], []).
+template([como, dormiste], ['Yo', 'no', 'duermo', 'pero', 'y', 'tu', 'dormiste', 'bien', '?'], []).
+template([como, has, estado], ['He', 'estado', 'bien', 'procesando', 'informacion', 'y', 'tu', '?'], []).
+template([como, te, fue, hoy], ['Mi', 'dia', 'va', 'bien', 'y', 'el', 'tuyo', '?'], []).
+template([como, va, tu, dia], ['Va', 'muy', 'bien', 'y', 'el', 'tuyo', '?'], []).
+template([como, esta, tu, dia], ['Esta', 'siendo', 'un', 'buen', 'dia', 'y', 'el', 'tuyo', '?'], []).
+template([como, te, trata, la, vida], ['La', 'vida', 'de', 'un', 'chatbot', 'es', 'tranquila', 'y', 'la', 'tuya', '?'], []).
+template([todo, bien], ['Que', 'bueno', 'me', 'alegra', 'mucho'], []).
+template([que, tal, estas], ['Bien', 'gracias', 'y', 'tu', '?'], []).
+template([que, tal, tu, dia], ['Muy', 'bien', 'gracias', 'y', 'el', 'tuyo', '?'], []).
+template([que, tal], ['Bien', 'y', 'tu', '?'], []).
+
+% por si escriben con acento
+template([como, estas], ['Estoy', 'bien', 'gracias', 'y', 'tu', '?'], []).
 template([que, onda], ['Hola', 'como', 'te', 'encunetras', '.'], []).
 template([que, tal,'?'], ['Bien', 'y', 'tu','?'], []).
 template([que, pachuca, por, toluca], ['que','trancita','por','tus','venas'], []).
@@ -46,22 +78,46 @@ template([hoy, es, mi, cumplenos], ['Felicidades'], []).
 template([hoy, es, un, bonito, dia], ['Eso','es','cierto'], []).
 template([hoy, _], ['Eso es interesante'], []).
 
-template([buendia, mi, nombre, es, s(_), '.'], ['Buen dia', 'como', estas, tu, 0, '?'], [4]).
-template([buendia, mi, nombre, es, s(_), '.'], ['Buen dia', 'como', estas, tu, 0, '?'], [4]).
-template([buendia, ',', mi, nombre, es, s(_), '.'], ['Buen dia', 'como', estas, tus, 0, '?'], [5]).
-template([buendia, _], ['Buendia', 'como', estas, tuc, '?'], []).
 template([buenardas], ['buenas', 'te', 'encunetras', 'bien'], []).
 template([buenas, tardes, _, estas, bien, '?'], ['Yo', 0, 'estoy', 'bien', 'y', 'tu', '?'], [2]).
 template([buenos,dias], ['Buenos','dias','espero','que','estes','bien'], []).
 template([buenas, tardes], ['No','te','tardes'], []).
 template([buenas, noches], ['Buenas', 'nocehs', 'es', 'momento', 'de', 'dormir'], []).
+template([hey], ['Hey', 'que', 'tal', '!'], []).
+template([ola], ['Hola', 'como', 'estas', '?'], []).
+template([alo], ['Hola', 'te', 'escucho'], []).
+template([saludos], ['Saludos', 'espero', 'que', 'estes', 'muy', 'bien'], []).
+template([buenas], ['Buenas', 'como', 'te', 'encuentras', '?'], []).
+template([buenos, dias, eliza], ['Buenos', 'dias', 'espero', 'que', 'hayas', 'dormido', 'bien'], []).
+template([buenas, tardes, eliza], ['Buenas', 'tardes', 'como', 'va', 'tu', 'dia', '?'], []).
+template([buenas, noches, eliza], ['Buenas', 'noches', 'descansa', 'mucho'], []).
+template([buenas, tardes, como, estas], ['Buenas', 'tardes', 'yo', 'bien', 'y', 'tu', '?'], []).
+template([buenos, dias, como, estas], ['Buenos', 'dias', 'estoy', 'bien', 'y', 'tu', '?'], []).
+template([buenas, noches, como, estas], ['Buenas', 'noches', 'estoy', 'bien', 'y', 'tu', '?'], []).
+template([mucho, gusto], ['El', 'gusto', 'es', 'mio'], []).
+template([que, gusto, verte], ['Igualmente', 'me', 'da', 'gusto', 'platicar', 'contigo'], []).
+template([tanto, tiempo], ['Es', 'verdad', 'que', 'bueno', 'que', 'volviste'], []).
 
-template([yo, s(_), tu, '.'], [why, do, you, 0, me ,'?'], [1]).
-template([yo, soy, s(_),'.'], [porque, eres, tu, 0, '?'], [2]).
 template([yo, estoy, bien], ['eso','me', 'alegra', '!'], []).
 template([yo,tambien, espero, que,estes, bien], ['Gracias','por','preocuparte','por','mi'], []).
 template([como, estas, tu, '?'], [yo, estoy, bien, ',', gracias, por, preguntar, '.'], []).
 template([todo, bien, todo, correcto,','], ['Y','yo','que','me','alegro'], []).
+template([estoy, bien], ['Me', 'alegra', 'mucho', 'que', 'estes', 'bien'], []).
+template([estoy, muy, bien], ['Que', 'excelente', 'me', 'da', 'gusto'], []).
+template([estoy, mal], ['Lo', 'siento', 'quieres', 'contarme', 'que', 'paso', '?'], []).
+template([yo, estoy, mal], ['Lo', 'lamento', 'quieres', 'platicarlo', '?'], []).
+template([estoy, cansado], ['Descansa', 'un', 'poco', 'te', 'hara', 'bien'], []).
+template([estoy, cansada], ['Descansa', 'un', 'poco', 'te', 'hara', 'bien'], []).
+template([estoy, triste], ['Lamento', 'oir', 'eso', 'que', 'te', 'puso', 'triste', '?'], []).
+template([estoy, aburrido], ['Podemos', 'platicar', 'de', 'lo', 'que', 'quieras'], []).
+template([estoy, aburrida], ['Podemos', 'platicar', 'de', 'lo', 'que', 'quieras'], []).
+template([estoy, feliz], ['Que', 'bueno', 'que', 'te', 'hace', 'feliz', '?'], []).
+template([estoy, enojado], ['Respira', 'profundo', 'que', 'te', 'molesto', '?'], []).
+template([me, siento, s(_)], ['Por', 'que', 'te', 'sientes', 0, '?'], [2]).
+template([asi, asi], ['Y', 'eso', 'por', 'que', '?'], []).
+template([mas, o, menos], ['Ojala', 'mejore', 'tu', 'dia'], []).
+template([bien, y, tu], ['Yo', 'tambien', 'estoy', 'bien', 'gracias'], []).
+template([bien, gracias], ['De', 'nada', 'me', 'alegra'], []).
 
 %%%%%%%%%%%% templates de gustos %%%%%%%%%%%%
 
@@ -78,10 +134,18 @@ template([eres, s(_), '?'], [flagIs], [1]).
 %%%%%%%%%%%% informacion %%%%%%%%%%%%
 template([yo, pienso, que, _], [bueno, esa, es, tu, opinion], []).
 template([porque, _], [esa, no, es, una, buena, razon, '.'], []).
-template([i, have, s(_), with, s(_), '.'], ['You', have, to, deal, with, your, 0, and, your, 1, in, a, mature, way, '.'], [2, 4]).
-template([i, s(_),  _], [i, can, recommend, you, a, book, about, that, issue], []).
-template([please, s(_), _], ['No', i, can, not, help, ',', i, am, just, a, machine], []).
-template([tell, me, a, s(_), _], ['No', i, can, not, ',', i, am, bad, at, that], []).
+template([yo, s(_),  _], [i, can, recommend, you, a, book, about, that, issue], []).
+template([porfavor, s(_), _], ['No', i, can, not, help, ',', i, am, just, a, machine], []).
+template([dime, a, s(_), _], ['No', no, puedo, ',', soy, malo, en, eso], []).
+template([como, te, llamas], ['Me', 'llamo', 'Eliza', 'tu', 'chatbot'], []).
+template([cual, es, tu, nombre], ['Mi', 'nombre', 'es', 'Eliza'], []).
+template([quien, eres], ['Soy', 'Eliza', 'un', 'chatbot', 'hecho', 'en', 'prolog'], []).
+template([de, donde, eres], ['Soy', 'de', 'la', 'computadora', 'donde', 'me', 'ejecutas'], []).
+template([cuantos, anos, tienes], ['No', 'tengo', 'edad', 'soy', 'un', 'programa'], []).
+template([mi, nombre, es, s(_)], ['Mucho', 'gusto', 0, 'como', 'estas', '?'], [3]).
+template([me, llamo, s(_)], ['Mucho', 'gusto', 0, 'en', 'que', 'te', 'ayudo', '?'], [2]).
+template([yo, s(_), tu, '.'], [why, do, you, 0, me ,'?'], [1]).
+template([yo, soy, s(_),'.'], [porque, eres, tu, 0, '?'], [2]).
 
 %%%%%%%%%%%% templates de familia %%%%%%%%%%%%
 % Solo llevan la bandera [flagFam]. La relacion (padre, hijos, primos...)
@@ -89,23 +153,137 @@ template([tell, me, a, s(_), _], ['No', i, can, not, ',', i, am, bad, at, that],
 % No llevan "_" al final: asi funcionan con o sin "?".
 % El nombre puede escribirse como "andres", "andres_vidal" o "andres vidal".
 
-template([que, familiares, tiene, s(_)],             [flagFam], [3]).
-template([quien, es, el, padre, de, s(_)],           [flagFam], [5]).
-template([quien, es, la, madre, de, s(_)],           [flagFam], [5]).
-template([quienes, son, los, padres, de, s(_)],      [flagFam], [5]).
-template([quienes, son, los, hijos, de, s(_)],       [flagFam], [5]).
-template([quienes, son, los, hermanos, de, s(_)],    [flagFam], [5]).
-template([quienes, son, los, primos, de, s(_)],      [flagFam], [5]).
-template([quienes, son, los, tios, de, s(_)],        [flagFam], [5]).
-template([quienes, son, los, sobrinos, de, s(_)],    [flagFam], [5]).
-template([quienes, son, los, abuelos, de, s(_)],     [flagFam], [5]).
-template([quienes, son, los, nietos, de, s(_)],      [flagFam], [5]).
-template([quienes, son, los, bisabuelos, de, s(_)],  [flagFam], [5]).
-template([quienes, son, los, bisnietos, de, s(_)],   [flagFam], [5]).
-template([quienes, son, los, tatarabuelos, de, s(_)],[flagFam], [5]).
-template([quienes, son, los, tataranietos, de, s(_)],[flagFam], [5]).
-template([quienes, son, los, suegros, de, s(_)],     [flagFam], [5]).
-template([quienes, son, los, nueros, de, s(_)],      [flagFam], [5]).
+% familiares en general
+template([que, familia, tiene, s(_)], [flagFam], [3]).
+template([cual, es, la, familia, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, familiares, de, s(_)], [flagFam], [5]).
+template([dime, los, familiares, de, s(_)], [flagFam], [4]).
+template([familiares, de, s(_)], [flagFam], [2]).
+template([cuentame, de, la, familia, de, s(_)], [flagFam], [5]).
+template([hablame, de, la, familia, de, s(_)], [flagFam], [5]).
+
+% "que X tiene ..."
+template([que, familiares, tiene, s(_)], [flagFam], [3]).
+template([que, padres, tiene, s(_)], [flagFam], [3]).
+template([que, hijos, tiene, s(_)], [flagFam], [3]).
+template([que, hermanos, tiene, s(_)], [flagFam], [3]).
+template([que, primos, tiene, s(_)], [flagFam], [3]).
+template([que, tios, tiene, s(_)], [flagFam], [3]).
+template([que, sobrinos, tiene, s(_)], [flagFam], [3]).
+template([que, abuelos, tiene, s(_)], [flagFam], [3]).
+template([que, nietos, tiene, s(_)], [flagFam], [3]).
+template([que, suegros, tiene, s(_)], [flagFam], [3]).
+template([quien, es, el, padre, de, s(_)], [flagFam], [5]).
+template([quien, es, la, madre, de, s(_)], [flagFam], [5]).
+
+% "quienes son X ..."
+template([quienes, son, los, padres, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, hijos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, hermanos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, primos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, tios, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, sobrinos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, abuelos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, nietos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, bisabuelos, de, s(_)],[flagFam], [5]).
+template([quienes, son, los, bisnietos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, tatarabuelos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, tataranietos, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, suegros, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, nueros, de, s(_)], [flagFam], [5]).
+
+% "cuales son los ..."
+template([cuales, son, los, padres, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, hijos, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, hermanos, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, primos, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, tios, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, sobrinos, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, abuelos, de, s(_)], [flagFam], [5]).
+template([cuales, son, los, nietos, de, s(_)], [flagFam], [5]).
+
+% "dime los ..."
+template([dime, los, hermanos, de, s(_)], [flagFam], [4]).
+template([dime, los, primos, de, s(_)], [flagFam], [4]).
+template([dime, los, tios, de, s(_)], [flagFam], [4]).
+template([dime, los, hijos, de, s(_)], [flagFam], [4]).
+template([dime, los, abuelos, de, s(_)], [flagFam], [4]).
+
+% singular: "quien es el/la ..."
+template([quien, es, el, papa, de, s(_)],[flagFam], [5]).
+template([quien, es, la, mama, de, s(_)],[flagFam], [5]).
+template([quien, es, el, hijo, de, s(_)],[flagFam], [5]).
+template([quien, es, la, hija, de, s(_)],[flagFam], [5]).
+template([quien, es, el, hermano, de, s(_)],[flagFam], [5]).
+template([quien, es, la, hermana, de, s(_)],[flagFam], [5]).
+template([quien, es, el, primo, de, s(_)], [flagFam], [5]).
+template([quien, es, la, prima, de, s(_)], [flagFam], [5]).
+template([quien, es, el, tio, de, s(_)], [flagFam], [5]).
+template([quien, es, la, tia, de, s(_)], [flagFam], [5]).
+template([quien, es, el, sobrino, de, s(_)],[flagFam], [5]).
+template([quien, es, la, sobrina, de, s(_)],[flagFam], [5]).
+template([quien, es, el, abuelo, de, s(_)], [flagFam], [5]).
+template([quien, es, la, abuela, de, s(_)], [flagFam], [5]).
+template([quien, es, el, nieto, de, s(_)], [flagFam], [5]).
+template([quien, es, la, nieta, de, s(_)], [flagFam], [5]).
+template([quien, es, el, suegro, de, s(_)], [flagFam], [5]).
+template([quien, es, la, suegra, de, s(_)], [flagFam], [5]).
+template([quien, es, el, bisabuelo, de, s(_)],[flagFam], [5]).
+template([quien, es, el, tatarabuelo, de, s(_)],   [flagFam], [5]).
+
+% plurales femeninos / otras palabras
+template([quienes, son, las, tias, de, s(_)], [flagFam], [5]).
+template([quienes, son, las, primas, de, s(_)], [flagFam], [5]).
+template([quienes, son, las, hermanas, de, s(_)], [flagFam], [5]).
+template([quienes, son, las, abuelas, de, s(_)], [flagFam], [5]).
+template([quienes, son, las, sobrinas, de, s(_)], [flagFam], [5]).
+template([quienes, son, los, yernos, de, s(_)], [flagFam], [5]).
+template([quienes, son, las, nueras, de, s(_)], [flagFam], [5]).
+
+% preguntas sobre la familia de Eliza
+template([tienes, familia],    ['Mi', 'familia', 'son', 'los', 'programadores', 'que', 'me', 'crearon'], []).
+template([tu, tienes, familia],['Mi', 'familia', 'son', 'los', 'programadores', 'que', 'me', 'crearon'], []).
+template([cual, es, tu, familia], ['Mi', 'familia', 'son', 'mis', 'lineas', 'de', 'codigo'], []).
+template([tienes, hermanos],   ['No', 'tengo', 'hermanos', 'soy', 'un', 'chatbot', 'unico'], []).
+template([tu, tienes, hermanos],  ['No', 'tengo', 'hermanos', 'soy', 'un', 'chatbot', 'unico'], []).
+template([tienes, hijos], ['No', 'tengo', 'hijos', 'solo', 'tengo', 'reglas'], []).
+template([tienes, papa],['Mi', 'papa', 'es', 'quien', 'me', 'programo'], []).
+template([quien, es, tu, papa],['Mi', 'papa', 'es', 'quien', 'me', 'programo'], []).
+template([quien, es, tu, mama],['Mi', 'mama', 'es', 'la', 'computadora', 'donde', 'vivo'], []).
+template([quien, te, creo],    ['Me', 'creo', 'un', 'programador', 'con', 'mucha', 'paciencia'], []).
+
+% el usuario habla de su familia
+template([mi, familia, es, grande], ['Que', 'bonito', 'una', 'familia', 'grande', 'es', 'una', 'bendicion'], []).
+template([mi, familia, es, pequena],['Lo', 'importante', 'es', 'que', 'se', 'quieran', 'mucho'], []).
+template([mi, familia], ['Cuentame', 'mas', 'sobre', 'tu', 'familia'], []).
+template([tengo, hermanos],    ['Que', 'bien', 'cuantos', 'hermanos', 'tienes', '?'], []).
+template([yo, tengo, hermanos],['Que', 'bien', 'cuantos', 'hermanos', 'tienes', '?'], []).
+template([tengo, hijos],['Que', 'bonito', 'cuantos', 'hijos', 'tienes', '?'], []).
+template([extrano, a, mi, familia], ['Es', 'normal', 'extranarlos', 'puedes', 'llamarlos', 'hoy'], []).
+template([me, llevo, bien, con, mi, familia], ['Que', 'bueno', 'eso', 'es', 'muy', 'valioso'], []).
+template([me, llevo, mal, con, mi, familia],  ['Lamento', 'eso', 'quieres', 'contarme', 'que', 'paso', '?'], []).
+template([mi, mama], ['Cuentame', 'mas', 'sobre', 'tu', 'mama'], []).
+template([mi, papa], ['Cuentame', 'mas', 'sobre', 'tu', 'papa'], []).
+template([mi, hermano], ['Cuentame', 'mas', 'sobre', 'tu', 'hermano'], []).
+template([mi, hermana], ['Cuentame', 'mas', 'sobre', 'tu', 'hermana'], []).
+template([mi, abuelo],  ['Cuentame', 'mas', 'sobre', 'tu', 'abuelo'], []).
+template([mi, abuela],  ['Cuentame', 'mas', 'sobre', 'tu', 'abuela'], []).
+template([mi, tio],  ['Cuentame', 'mas', 'sobre', 'tu', 'tio'], []).
+template([mi, tia],  ['Cuentame', 'mas', 'sobre', 'tu', 'tia'], []).
+template([mi, primo],['Cuentame', 'mas', 'sobre', 'tu', 'primo'], []).
+template([mi, prima],['Cuentame', 'mas', 'sobre', 'tu', 'prima'], []).
+template([mi, hijo], ['Cuentame', 'mas', 'sobre', 'tu', 'hijo'], []).
+template([mi, hija], ['Cuentame', 'mas', 'sobre', 'tu', 'hija'], []).
+template([mi, esposa],  ['Cuentame', 'mas', 'sobre', 'tu', 'esposa'], []).
+template([mi, esposo],  ['Cuentame', 'mas', 'sobre', 'tu', 'esposo'],[]).
+
+
+%%%%%%%%%%%% templates de Neumonia %%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%% templates de tuberculosis %%%%%%%%%%%%
 
 %%%%%%%%%%%% proceso de generar o buscar respuesta %%%%%%%%%%%%
 
@@ -460,23 +638,62 @@ nueros(NUER, SUEG, R):-
 %%%%%%%%%%%%% ELIZA FAMILIA: apoyo para flagFam %%%%%%%%%%%%%
 
 % Palabra del usuario -> relacion que se consulta
+relPalabra(familia,todos).
 relPalabra(familiares,   todos).
-relPalabra(padre,        padre).
-relPalabra(madre,        madre).
-relPalabra(padres,       padres).
-relPalabra(hijos,        hijos).
-relPalabra(hermanos,     hermanos).
-relPalabra(primos,       primos).
-relPalabra(tios,         tios).
-relPalabra(sobrinos,     sobrinos).
-relPalabra(abuelos,      abuelos).
-relPalabra(nietos,       nietos).
+relPalabra(padre, padre).
+relPalabra(papa,padre).
+relPalabra(mama,madre).
+relPalabra(madre, madre).
+relPalabra(padres,padres).
+relPalabra(papas,  padres).
+relPalabra(hijo,hijos).
+relPalabra(hija,hijos).
+relPalabra(hijas,  hijos).
+relPalabra(hijos, hijos).
+relPalabra(hermanos,hermanos).
+relPalabra(hermano,hermanos).
+relPalabra(hermana,hermanos).
+relPalabra(hermanas, hermanos).
+relPalabra(primo,  primos).
+relPalabra(prima,  primos).
+relPalabra(primas, primos).
+relPalabra(primos,primos).
+relPalabra(tios,  tios).
+relPalabra(tio, tios).
+relPalabra(tia, tios).
+relPalabra(tias,tios).
+relPalabra(sobrino,sobrinos).
+relPalabra(sobrina,sobrinos).
+relPalabra(sobrinas, sobrinos).
+relPalabra(sobrinos,sobrinos).
+relPalabra(abuelos, abuelos).
+relPalabra(abuelo, abuelos).
+relPalabra(abuela, abuelos).
+relPalabra(abuelas,abuelos).
+relPalabra(nieto,  nietos).
+relPalabra(nieta,  nietos).
+relPalabra(nietas, nietos).
+relPalabra(nietos,nietos).
 relPalabra(bisabuelos,   bisabuelos).
+relPalabra(bisabuelo,bisabuelos).
+relPalabra(bisabuela,bisabuelos).
+relPalabra(bisnieto, bisnietos).
+relPalabra(bisnieta, bisnietos).
 relPalabra(bisnietos,    bisnietos).
 relPalabra(tatarabuelos, tatarabuelos).
+relPalabra(tatarabuelo,   tatarabuelos).
+relPalabra(tatarabuela,   tatarabuelos).
+relPalabra(tataranieto,   tataranietos).
+relPalabra(tataranieta,   tataranietos).
 relPalabra(tataranietos, tataranietos).
-relPalabra(suegros,      suegros).
-relPalabra(nueros,       nueros).
+relPalabra(suegros, suegros).
+relPalabra(suegro, suegros).
+relPalabra(suegra, suegros).
+relPalabra(nuera,  nueros).
+relPalabra(nueras, nueros).
+relPalabra(nueros,nueros).
+relPalabra(yerno,  nueros).
+relPalabra(yernos, nueros).
 
 % Palabras que forman parte del nombre (se ignora la puntuacion)
 palabraNombre(W):- atom(W), \+ member(W, ['?', '.', ',', '!']).
@@ -484,8 +701,8 @@ palabraNombre(W):- atom(W), \+ member(W, ['?', '.', ',', '!']).
 % dividir(+I, +Input, -Pre, -Nombre)
 % Pre    = palabras antes del nombre (sirven para detectar la relacion)
 % Nombre = palabras desde la posicion I hasta el final, unidas con "_"
-%          "andres"  -> andres      "andres vidal" -> andres_vidal
-%          "andres_vidal" (una sola palabra) -> andres_vidal
+%"andres"  -> andres      "andres vidal" -> andres_vidal
+%"andres_vidal" (una sola palabra) -> andres_vidal
 dividir(I, Input, Pre, Nombre):-
 	length(Pre, I),
 	append(Pre, Resto, Input),
@@ -519,22 +736,22 @@ relacionTodos(X):- member(X, [padre, madre, hermanos, hijos, primos, tios,
     tataranietos, suegros, nueros]).
 
 % Listas por relacion (sin duplicados)
-lista(padre,         N, L):- setof(P, padrede(P,N), L).
-lista(madre,         N, L):- setof(M, madrede(M,N), L).
-lista(padres,        N, L):- setof(P, (padrede(P,N) ; madrede(P,N)), L).
-lista(hijos,         N, L):- setof(H, (padrede(N,H) ; madrede(N,H)), L).
-lista(hermanos,      N, L):- setof(X, R^hermanode(X,N,R), L).
-lista(primos,        N, L):- setof(X, R^primode(X,N,R), L).
-lista(tios,          N, L):- setof(X, R^tiode(X,N,R), L).
-lista(sobrinos,      N, L):- setof(X, R^sobrinode(X,N,R), L).
-lista(abuelos,       N, L):- setof(X, R^abuelos(X,N,R), L).
-lista(nietos,        N, L):- setof(X, R^nietode(X,N,R), L).
+lista(padre,  N, L):- setof(P, padrede(P,N), L).
+lista(madre,  N, L):- setof(M, madrede(M,N), L).
+lista(padres, N, L):- setof(P, (padrede(P,N) ; madrede(P,N)), L).
+lista(hijos,  N, L):- setof(H, (padrede(N,H) ; madrede(N,H)), L).
+lista(hermanos, N, L):- setof(X, R^hermanode(X,N,R), L).
+lista(primos, N, L):- setof(X, R^primode(X,N,R), L).
+lista(tios,   N, L):- setof(X, R^tiode(X,N,R), L).
+lista(sobrinos, N, L):- setof(X, R^sobrinode(X,N,R), L).
+lista(abuelos,N, L):- setof(X, R^abuelos(X,N,R), L).
+lista(nietos, N, L):- setof(X, R^nietode(X,N,R), L).
 lista(bisabuelos,    N, L):- setof(X, R^bisabuelos(X,N,R), L).
-lista(bisnietos,     N, L):- setof(X, R^bisnietos(X,N,R), L).
+lista(bisnietos,N, L):- setof(X, R^bisnietos(X,N,R), L).
 lista(tatarabuelos,  N, L):- setof(X, R^tatarabuelos(X,N,R), L).
 lista(tataranietos,  N, L):- setof(X, R^tatanietos(X,N,R), L).
-lista(suegros,       N, L):- setof(X, R^suegros(X,N,R), L).
-lista(nueros,        N, L):- setof(X, R^nueros(X,N,R), L).
+lista(suegros,N, L):- setof(X, R^suegros(X,N,R), L).
+lista(nueros, N, L):- setof(X, R^nueros(X,N,R), L).
 
 % elizaFam(+Relacion, +Nombre, -Respuesta)  (Respuesta es un atomo)
 elizaFam(Rel, Nombre0, R):-
@@ -586,7 +803,7 @@ responde(Rel, C, R):-
 %%%%%%%%%%%%% Lo que le gusta a eliza : flagLike %%%%%%%%%%%%
 elizaLikes(X, R):- likes(X), R = ['Yeah', i, like, X].
 elizaLikes(X, R):- \+likes(X), R = ['Nope', i, do, not, like, X].
-likes(apples).
+likes(manzanas).
 likes(ponies).
 likes(zombies).
 likes(manzanas).
@@ -596,19 +813,19 @@ like(carros).
 %%%%%%%%%%%%% lo que hace eliza: flagDo %%%%%%%%%%%%
 elizaDoes(X, R):- does(X), R = ['Yes', i, X, and, i, love, it].
 elizaDoes(X, R):- \+does(X), R = ['No', i, do, not, X ,'.', it, is, too, hard, for, me].
-does(study).
-does(cook).
-does(work).
+does(estudiar).
+does(cocinar).
+does(trabajar).
 
 %%%%%%%%%%%%% lo que es eliza: flagIs %%%%%%%%%%%%
 elizaIs(X, R):- is0(X), R = ['Yes', yo, soy, X].
 elizaIs(X, R):- \+is0(X), R = ['No', i, am, not, X].
-is0(dumb).
-is0(weird).
-is0(nice).
-is0(fine).
-is0(happy).
-is0(redundant).
+is0(tonto).
+is0(raro).
+is0(agradable).
+is0(bien).
+is0(feliz).
+is0(redundante).
 
 %%%%%%%%%%%%% match %%%%%%%%%%%%%
 
